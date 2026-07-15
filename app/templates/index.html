@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | Rubik's Cube Solver{% endblock %}
+
+{% block content %}
+<section class="dashboard-hero">
+    <p class="eyebrow">Cube Vision Dashboard</p>
+    <h2>Upload all six cube faces</h2>
+    <p class="hero-copy">
+        Add one image per face to prepare your cube state for AI solving.
+        Frontend preview is enabled. Processing is not implemented yet.
+    </p>
+</section>
+
+<section class="upload-grid" aria-label="Cube face uploads">
+    <article class="upload-card" data-face="Front">
+        <header class="upload-card-header">
+            <h3>Front</h3>
+            <span class="status-pill">Pending</span>
+        </header>
+        <label class="preview-frame" for="face-front-input">
+            <img id="preview-front" alt="Front face preview" class="preview-image" hidden>
+            <span class="preview-placeholder">No image selected</span>
+        </label>
+        <input id="face-front-input" class="face-input" type="file" accept="image/*" data-face="front">
+    </article>
+
+    <article class="upload-card" data-face="Right">
+        <header class="upload-card-header">
+            <h3>Right</h3>
+            <span class="status-pill">Pending</span>
+        </header>
+        <label class="preview-frame" for="face-right-input">
+            <img id="preview-right" alt="Right face preview" class="preview-image" hidden>
+            <span class="preview-placeholder">No image selected</span>
+        </label>
+        <input id="face-right-input" class="face-input" type="file" accept="image/*" data-face="right">
+    </article>
+
+    <article class="upload-card" data-face="Back">
+        <header class="upload-card-header">
+            <h3>Back</h3>
+            <span class="status-pill">Pending</span>
+        </header>
+        <label class="preview-frame" for="face-back-input">
+            <img id="preview-back" alt="Back face preview" class="preview-image" hidden>
+            <span class="preview-placeholder">No image selected</span>
+        </label>
+        <input id="face-back-input" class="face-input" type="file" accept="image/*" data-face="back">
+    </article>
+
+    <article class="upload-card" data-face="Left">
+        <header class="upload-card-header">
+            <h3>Left</h3>
+            <span class="status-pill">Pending</span>
+        </header>
+        <label class="preview-frame" for="face-left-input">
+            <img id="preview-left" alt="Left face preview" class="preview-image" hidden>
+            <span class="preview-placeholder">No image selected</span>
+        </label>
+        <input id="face-left-input" class="face-input" type="file" accept="image/*" data-face="left">
+    </article>
+
+    <article class="upload-card" data-face="Up">
+        <header class="upload-card-header">
+            <h3>Up</h3>
+            <span class="status-pill">Pending</span>
+        </header>
+        <label class="preview-frame" for="face-up-input">
+            <img id="preview-up" alt="Up face preview" class="preview-image" hidden>
+            <span class="preview-placeholder">No image selected</span>
+        </label>
+        <input id="face-up-input" class="face-input" type="file" accept="image/*" data-face="up">
+    </article>
+
+    <article class="upload-card" data-face="Down">
+        <header class="upload-card-header">
+            <h3>Down</h3>
+            <span class="status-pill">Pending</span>
+        </header>
+        <label class="preview-frame" for="face-down-input">
+            <img id="preview-down" alt="Down face preview" class="preview-image" hidden>
+            <span class="preview-placeholder">No image selected</span>
+        </label>
+        <input id="face-down-input" class="face-input" type="file" accept="image/*" data-face="down">
+    </article>
+</section>
+{% endblock %}
